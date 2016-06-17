@@ -1,0 +1,17 @@
+{
+  "name": "wtc-scroller",
+  "homepage": "https://github.com/wethegit/wtc-scroller",
+  "authors": [
+    "Liam Egan <liam@wethecollective.com>"
+  ],
+  "description": "A simple singleton class that is used for controlling and reporting on user scrolling",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
