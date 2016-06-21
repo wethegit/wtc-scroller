@@ -31,15 +31,9 @@
           var op;
           op = this;
           this.events = {};
-          if (!Modernizr.touch) {
-            $w.scroll(function(e) {
-              return op.onScroll(e);
-            });
-          } else {
-            $w.on('touchmove', function(e) {
-              return op.onScroll(e);
-            });
-          }
+          $w.scroll(function(e) {
+            return op.onScroll(e);
+          });
         }
         ScrollerPrivate.prototype.getCanScroll = function() {
           return true;
