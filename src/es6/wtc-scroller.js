@@ -53,11 +53,7 @@ class Scroller {
     return this.oldTop;
   }
 
-  bind(topic, handler, context) {
-    if (context === null) {
-      context = this;
-    }
-
+  bind(topic, handler, context = this) {
     let ev = this.events[topic];
     if (!ev) {
       ev = this.events[topic] = [];
@@ -71,11 +67,7 @@ class Scroller {
     return ev;
   }
 
-  bindTriggerPoint(point, handler, context) {
-    if (context === null) {
-      context = this;
-    }
-
+  bindTriggerPoint(point, handler, context = this) {
     let tp = this.events.triggerpoint;
     if (!tp) {
       tp = this.events.triggerpoint = [];
@@ -87,11 +79,7 @@ class Scroller {
     });
   }
 
-  bindTriggerElement(element, handler, context) {
-    if (context === null) {
-      context = this;
-    }
-
+  bindTriggerElement(element, handler, context = this) {
     let te = this.events.triggerelement;
     if(!te) {
       te = this.events.triggerelement = [];
@@ -137,8 +125,6 @@ class Scroller {
   }
 
   triggerElements(oldTop, top, bottom, middle) {
-    var element_top, event, _i, _len, _ref, _results;
-
     var results = [];
     if (this.events.triggerelement !== null) {
       let ref = this.events.triggerelement;
