@@ -23,7 +23,7 @@ class Scroller {
 
     this.events = {};
 
-    window.attachEvent('scroll', (e)  => {
+    window.addEventListener('scroll', (e)  => {
       this.onScroll(e);
     });
 
