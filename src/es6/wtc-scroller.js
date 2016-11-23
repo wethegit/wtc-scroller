@@ -113,7 +113,7 @@ class Scroller {
   triggerPoints (oldTop, top, bottom, middle) {
     var results = [];
 
-    if (this.events.triggerpoint !== null) {
+    if (this.events.triggerpoint) {
       let events = this.events.triggerpoint.slice(oldTop, top);
       for (let i = 0; i < events.length; i++) {
         let event = events[i];
@@ -126,7 +126,7 @@ class Scroller {
 
   triggerElements(oldTop, top, bottom, middle) {
     var results = [];
-    if (this.events.triggerelement !== null) {
+    if (this.events.triggerelement) {
       let ref = this.events.triggerelement;
 
       for (let i = 0; i < ref.length; i++) {
