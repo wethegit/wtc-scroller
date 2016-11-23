@@ -141,7 +141,7 @@ class Scroller {
 
   static get instance() {
     if (!instance) {
-      instace = new Scroller();
+      instance = new Scroller();
     }
     return instance;
   }
